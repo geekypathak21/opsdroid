@@ -3,7 +3,7 @@ welcome-message: bool(required=False)
 connectors:
   list(include('websocket', required=False),
   include('shell', required=False),
-  include('webexteams', required=False),
+  include('ciscospark', required=False),
   include('facebook', required=False),
   include('github', required=False),
   include('matrix', required=False),
@@ -50,8 +50,8 @@ shell:
   name: regex('^(?i)shell$')
   bot-name: str(required=False)
 ---
-webexteams:
-  name: regex('^(?i)webexteams$')
+ciscospark:
+  name: regex('^(?i)ciscospark$')
   webhook-url: str()
   access-token: str()
 ---
